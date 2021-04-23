@@ -1,0 +1,25 @@
+START TRANSACTION;
+ALTER TABLE `price` DROP FOREIGN KEY `fk_price_game_1`;
+ALTER TABLE `platform` DROP FOREIGN KEY `fk_platform_game_1`;
+ALTER TABLE `price` DROP FOREIGN KEY `fk_price_region_1`;
+-- ALTER TABLE `user` DROP FOREIGN KEY `fk_user_region_1`;
+ALTER TABLE `comment` DROP FOREIGN KEY `fk_comment_user_1`;
+ALTER TABLE `comment` DROP FOREIGN KEY `fk_comment_game_1`;
+ALTER TABLE `follow` DROP FOREIGN KEY `fk_follow_user_1`;
+ALTER TABLE `follow` DROP FOREIGN KEY `fk_follow_user_2`;
+ALTER TABLE `ownership` DROP FOREIGN KEY `fk_ownership_game_1`;
+ALTER TABLE `ownership` DROP FOREIGN KEY `fk_ownership_user_1`;
+ALTER TABLE `category` DROP FOREIGN KEY `fk_category_game_1`;
+ALTER TABLE `tag` DROP FOREIGN KEY `fk_tag_game_1`;
+
+DROP TABLE `game`;
+DROP TABLE `price`;
+DROP TABLE `platform`;
+DROP TABLE `region`;
+DROP TABLE `user`;
+DROP TABLE `comment`;
+DROP TABLE `follow`;
+DROP TABLE `ownership`;
+DROP TABLE `category`;
+DROP TABLE `tag`;
+COMMIT;
